@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nuestros Servicios "Sugarless"</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#a6e949",
+            "background-light": "#f7f8f6",
+            "background-dark": "#1a2111",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e1e5dc] dark:border-b-[#3a452a] px-10 py-3">
+<div class="flex items-center gap-4 text-[#151811] dark:text-background-light">
+<a href="index.html" class="flex items-center gap-4">
+<img alt="Sugarless logo" class="h-6 w-auto" src="images/sugarless.png"/>
+<h2 class="text-[#151811] dark:text-background-light text-lg font-bold leading-tight tracking-[-0.015em]">Sugarless</h2>
+</a>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#788863] dark:text-[#b4c0a2] text-sm font-medium leading-normal hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="text-[#788863] dark:text-[#b4c0a2] text-sm font-medium leading-normal hover:text-primary transition-colors" href="productos.html">Productos</a>
+<a class="text-[#151811] dark:text-primary text-sm font-bold leading-normal" href="servicios.html">Servicios</a>
+<a class="text-[#788863] dark:text-[#b4c0a2] text-sm font-medium leading-normal hover:text-primary transition-colors" href="tiendas.html">Tiendas</a>
+<a class="text-[#788863] dark:text-[#b4c0a2] text-sm font-medium leading-normal hover:text-primary transition-colors" href="about.html">Sobre Nosotros</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#151811] text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Contáctanos</span>
+</button>
+</div>
+</header>
+<main class="flex flex-col gap-10 items-center text-center py-10 md:py-16">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-center gap-3 p-4 max-w-2xl">
+<div class="flex flex-col gap-3">
+<p class="text-[#151811] dark:text-background-light text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">Nuestros Servicios</p>
+<p class="text-[#788863] dark:text-[#b4c0a2] text-base font-normal leading-normal">Descubre cómo Sugarless puede ayudarte a llevar un estilo de vida más saludable y divertido.</p>
+</div>
+</div>
+<!-- TextGrid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 w-full">
+<div class="flex flex-1 gap-4 rounded-xl border border-[#e1e5dc] dark:border-[#3a452a] bg-white dark:bg-background-dark p-6 flex-col text-left items-start hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+<div class="text-primary" data-icon="AppleLogo" data-size="32px" data-weight="regular">
+<span class="material-symbols-outlined" style="font-size: 32px;">nutrition</span>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<h2 class="text-[#151811] dark:text-background-light text-base font-bold leading-tight">Asesoramiento Nutricional Personalizado</h2>
+<p class="text-[#788863] dark:text-[#b4c0a2] text-sm font-normal leading-normal">Planes de comida hechos a tu medida por nuestros expertos.</p>
+</div>
+<button class="flex mt-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-[#151811] dark:text-background-light text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/40 dark:hover:bg-primary/50 transition-colors">
+<span class="truncate">Saber Más</span>
+</button>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-[#e1e5dc] dark:border-[#3a452a] bg-white dark:bg-background-dark p-6 flex-col text-left items-start hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+<div class="text-primary" data-icon="CalendarX" data-size="32px" data-weight="regular">
+<span class="material-symbols-outlined" style="font-size: 32px;">calendar_month</span>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<h2 class="text-[#151811] dark:text-background-light text-base font-bold leading-tight">Programas de Alimentación Saludable</h2>
+<p class="text-[#788863] dark:text-[#b4c0a2] text-sm font-normal leading-normal">Únete a nuestros programas y aprende a comer delicioso y sin azúcar.</p>
+</div>
+<button class="flex mt-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-[#151811] dark:text-background-light text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/40 dark:hover:bg-primary/50 transition-colors">
+<span class="truncate">Saber Más</span>
+</button>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-[#e1e5dc] dark:border-[#3a452a] bg-white dark:bg-background-dark p-6 flex-col text-left items-start hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+<div class="text-primary" data-icon="CaretCircleRight" data-size="32px" data-weight="regular">
+<span class="material-symbols-outlined" style="font-size: 32px;">cooking</span>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<h2 class="text-[#151811] dark:text-background-light text-base font-bold leading-tight">Talleres de Cocina para Niños</h2>
+<p class="text-[#788863] dark:text-[#b4c0a2] text-sm font-normal leading-normal">Diviértete aprendiendo a preparar tus propios snacks saludables.</p>
+</div>
+<button class="flex mt-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-[#151811] dark:text-background-light text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/40 dark:hover:bg-primary/50 transition-colors">
+<span class="truncate">Saber Más</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col gap-6 px-5 py-10 text-center @container mt-10 border-t border-solid border-t-[#e1e5dc] dark:border-t-[#3a452a]">
+<div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+<a class="text-[#788863] dark:text-[#b4c0a2] text-base font-normal leading-normal min-w-40" href="#">Términos de Servicio</a>
+<a class="text-[#788863] dark:text-[#b4c0a2] text-base font-normal leading-normal min-w-40" href="#">Política de Privacidad</a>
+<a class="text-[#788863] dark:text-[#b4c0a2] text-base font-normal leading-normal min-w-40" href="#">Contacto</a>
+</div>
+<div class="flex flex-wrap justify-center gap-4">
+<a href="#">
+<div class="text-[#788863] dark:text-[#b4c0a2]" data-icon="InstagramLogo" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24" viewbox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path>
+</svg>
+</div>
+</a>
+<a href="#">
+<div class="text-[#788863] dark:text-[#b4c0a2]" data-icon="FacebookLogo" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24" viewbox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M232,128a104,104,0,1,1-112-103.15V88h-32v32h32v24c0,31.78,18.67,49.27,47.34,49.27a189.5,189.5,0,0,0,28.66-2.53V168h-20.73c-15.4,0-17.27-7.32-17.27-17.11V120H184l-4-32H152V24.85A104.13,104.13,0,0,1,232,128Z"></path>
+</svg>
+</div>
+</a>
+<a href="#">
+<div class="text-[#788863] dark:text-[#b4c0a2]" data-icon="TwitterLogo" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24" viewbox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M245.66,77.66a8,8,0,0,1-8.54,9.45,49.08,49.08,0,0,0-35.12-14.59,49.19,49.19,0,0,0-49.18,49.18,48.66,48.66,0,0,0,.94,9.6,140.21,140.21,0,0,1-101.86-51.65,49.2,49.2,0,0,0,15.2,65.58,48.61,48.61,0,0,1-22.28-6.15v.63a49.18,49.18,0,0,0,39.42,48.19,49.4,49.4,0,0,1-22.21,1.06,49.18,49.18,0,0,0,45.92,34.13,98.62,98.62,0,0,1-61.05,21.1,101.2,101.2,0,0,1-11.75-.68,139.54,139.54,0,0,0,75.54,22.14,139.75,139.75,0,0,0,140-140c0-2.13,0-4.25-.15-6.36A99.41,99.41,0,0,0,245.66,77.66Z"></path>
+</svg>
+</div>
+</a>
+</div>
+<p class="text-[#788863] dark:text-[#b4c0a2] text-base font-normal leading-normal">© 2024 Sugarless. Todos los derechos reservados.</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Productos "Sugarless"</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#9dee2b",
+              "background-light": "#f7f8f6",
+              "background-dark": "#1a2210",
+              "text-light": "#151811",
+              "text-muted-light": "#798961",
+              "text-dark": "#f7f8f6",
+              "text-muted-dark": "#a8b594",
+              "border-light": "#f3f4f0",
+              "border-dark": "#2a361a",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+<main class="layout-content-container flex flex-col max-w-[960px] flex-1 w-full">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-light dark:border-border-dark px-10 py-3 mb-8">
+<div class="flex items-center gap-4">
+<a href="index.html" class="flex items-center gap-4">
+<img alt="Sugarless logo" class="h-6 w-auto" src="images/sugarless.png"/>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Sugarless</h2>
+</a>
+</div>
+<nav class="hidden md:flex flex-1 justify-center items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="text-sm font-bold text-primary leading-normal" href="productos.html">Productos</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="tiendas.html">Tiendas</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="about.html">Sobre Nosotros</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-text-light text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined mr-2">shopping_cart</span>
+<span class="truncate">Carrito</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-border-light dark:bg-border-dark gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-opacity-80 transition-colors">
+<span class="material-symbols-outlined text-xl">person</span>
+</button>
+</div>
+</header>
+<div class="flex flex-wrap justify-center text-center gap-3 p-4">
+<div class="flex w-full flex-col gap-3">
+<p class="text-4xl font-black leading-tight tracking-[-0.033em]">Nuestros Productos</p>
+<p class="text-base font-normal leading-normal text-text-muted-light dark:text-text-muted-dark">Deliciosos y saludables, ¡sin azúcar!</p>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4">
+<div class="flex flex-col gap-4 p-4 border border-border-light dark:border-border-dark rounded-xl text-center items-center hover:shadow-lg transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Galletas de avena con chispas de chocolate sin azúcar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKq4QsQzFmglVnBn69C1sBPLvIgFswMa2ATxD9SzQNBt9vPLjYrfAjbdtqZSuRCHTLarfu6JGGSbBO76UWl4ILX05MeGyKI-CjR6SDu0wnM1N_JyqCvkTkFSdRSHRye_xy8PeDTpYvJmfan0Jz44-O98KHDuSe6HnGNqxty9gOTcnX2oveiDlnQn5ZuTiaRzlKf0unc0rds8RuGPHAhyqJQA2de-rtR_GtZTuQAGiOI7TPKUrcRlq81Q_smntsXcIMemn3w0D4pVN2");'></div>
+<div>
+<p class="text-base font-bold leading-normal">Galletas de Avena y Chispas</p>
+<p class="text-sm font-normal leading-normal text-text-muted-light dark:text-text-muted-dark mt-1">Hechas con avena integral y endulzadas naturalmente.</p>
+</div>
+<p class="text-lg font-bold">$3.50</p>
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-text-light text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">Añadir al carrito</span>
+</button>
+</div>
+<div class="flex flex-col gap-4 p-4 border border-border-light dark:border-border-dark rounded-xl text-center items-center hover:shadow-lg transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Barra energética saludable con frutos rojos y nueces" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-QTpk0FxPTragDN1Cxt5EcH-nFe3AmxsxnF9oCoEfxzk8CGd0-fRNesH6KljjaQJa9NqV40v094cQtZfT88EF8DHE9r8xEjKNeAls0WQCloANnpgzV6gjpLdBOrv3RfHqlRsvM-QsW84C9c8OE0vQmj54fPLmyDdWNArrCtQL03kGJANSt4xrPiHSS6PnPgQDVOUrk4mFYuNzW70vpVsjq12I-Rif1Oz7FQmIJ-t1jW3forTVvTgNgv0h2vO7DmkEEeqsGKzyKqLQ");'></div>
+<div>
+<p class="text-base font-bold leading-normal">Barra Energética de Frutos Rojos</p>
+<p class="text-sm font-normal leading-normal text-text-muted-light dark:text-text-muted-dark mt-1">Perfecta para recargar energía de forma saludable.</p>
+</div>
+<p class="text-lg font-bold">$2.00</p>
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-text-light text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">Añadir al carrito</span>
+</button>
+</div>
+<div class="flex flex-col gap-4 p-4 border border-border-light dark:border-border-dark rounded-xl text-center items-center hover:shadow-lg transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Muffin esponjoso de plátano con nueces por encima" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgy03sGMYkCKCzn8NI_Zirfjxr-d16BO04W9uPvEEL9_TlEh-zNXT24gYN4qb8V4IwZDixihp_KRoEtYcwe4DW5DcAWwwCGGRy4coSOafzl_TlrYVmOhwUOT8DXFhPon9_quI95ZrnTCMXUJwkMq4xs02pE4cyXC2jgjgv5lfmy3ptYKQFlrzDViwkV1Ct6Rgrf5lghkvIrpaIzqTW4vgfzbUNRc8ioeSrSLpG1Z936iJWUdSnyflx-5PxxwoF3YZz5ZN47B7j4GBM");'></div>
+<div>
+<p class="text-base font-bold leading-normal">Muffin de Plátano y Nuez</p>
+<p class="text-sm font-normal leading-normal text-text-muted-light dark:text-text-muted-dark mt-1">Esponjoso y nutritivo, ideal para el desayuno.</p>
+</div>
+<p class="text-lg font-bold">$2.50</p>
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-text-light text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">Añadir al carrito</span>
+</button>
+</div>
+<div class="flex flex-col gap-4 p-4 border border-border-light dark:border-border-dark rounded-xl text-center items-center hover:shadow-lg transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Yogur griego cremoso en un bol blanco" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCczLvhORU577VnaMvvdqOIAAHULFMM-TLnzDsQ1Ji3J6CwFW2ImdxOKQVAOEYvFaQpFNKTTh5o2Wj8TDcbTKwms2e6JtCbWYCNrruKHTacqKz7-bxYfQAAFRNaqGjjXyvnnW3Hh1D0gRHLDAVo65WqGfSgMHXCUG3CeBJp51U7w2qL_PHWkKKIca0y_pQMfkX6fo7yRD0dzB5NBeEe0v2Rh7zqLhet7N8lKo_nd2TRKSwI-HyCfRJieebRrb9ok7OFsHcO8zg1NCax");'></div>
+<div>
+<p class="text-base font-bold leading-normal">Yogur Griego Natural</p>
+<p class="text-sm font-normal leading-normal text-text-muted-light dark:text-text-muted-dark mt-1">Cremoso y sin azúcares añadidos, alto en proteína.</p>
+</div>
+<p class="text-lg font-bold">$1.80</p>
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-text-light text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">Añadir al carrito</span>
+</button>
+</div>
+<div class="flex flex-col gap-4 p-4 border border-border-light dark:border-border-dark rounded-xl text-center items-center hover:shadow-lg transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Jugo verde detox en un vaso de vidrio" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjHnp_-rUFfHp85UIjsTU9GDCTMZ8hxHYCO1f26m6GGUkw5Q4pZM-qxa50ka9UEVLE2mdrMwZ7IQW1u6hLpwN45YH2l406CvBDS2yewJYQgVOTX5DLOTyg1VpTlkJ7QEoONy3LMJBsfFWZJdM3tMdsr1CuZArJsUXW_GxRz_B7vjNZA64OB_50TIxCuZrEEyiymGEwHYhcNXIzm2TshW4bJ-AaCGL__VA2ZwwkNP3iAp8R6zo5ghGV_MTI1HJnr75RHvg8oVgIk3Gl");'></div>
+<div>
+<p class="text-base font-bold leading-normal">Jugo Verde Detox</p>
+<p class="text-sm font-normal leading-normal text-text-muted-light dark:text-text-muted-dark mt-1">Una mezcla refrescante de espinaca, manzana y pepino.</p>
+</div>
+<p class="text-lg font-bold">$4.00</p>
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-text-light text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">Añadir al carrito</span>
+</button>
+</div>
+<div class="flex flex-col gap-4 p-4 border border-border-light dark:border-border-dark rounded-xl text-center items-center hover:shadow-lg transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Tableta de chocolate amargo 85% cacao" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAIaSKcC2gY3hvPhTg6uqn8mir-1X4jZqhWmGmea-20tVqFXBc-cnQ9zfTIKoNDEq8B9qpkdbAS51dq31ODz7-CEQ47Z4mPXOzdnEOqnkyP-_-4u5bRmmzzBNIFI5DUTAbcWfh8QSNlQ0eStZB2ZoM8E1uVlQ0BucCwNmAfRlQmoSo05_PdjMq8Xb-cjCpKvBVLHdi0-US6RD-9sR_3kkBAffjZ7HOE59xHGtaxQMQUOIPK_SbiQ6F6T_-W7tqdPa7PkPV7gxsdiFJX");'></div>
+<div>
+<p class="text-base font-bold leading-normal">Chocolate Amargo 85%</p>
+<p class="text-sm font-normal leading-normal text-text-muted-light dark:text-text-muted-dark mt-1">Intenso sabor a cacao, rico en antioxidantes.</p>
+</div>
+<p class="text-lg font-bold">$4.50</p>
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-text-light text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">Añadir al carrito</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-center p-4 mt-8">
+<a class="flex size-10 items-center justify-center" href="#">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</a>
+<a class="text-sm font-bold leading-normal tracking-[0.015em] flex size-10 items-center justify-center rounded-full bg-primary text-text-light" href="#">1</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center rounded-full" href="#">2</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center rounded-full" href="#">3</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center rounded-full" href="#">4</a>
+<a class="flex size-10 items-center justify-center" href="#">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</a>
+</div>
+<footer class="flex flex-col gap-6 px-5 py-10 text-center mt-10 border-t border-border-light dark:border-border-dark">
+<div class="flex flex-wrap items-center justify-center gap-6 text-text-muted-light dark:text-text-muted-dark">
+<a class="text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors" href="#">Términos de Servicio</a>
+<a class="text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors" href="#">Política de Privacidad</a>
+<a class="text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors" href="#">Contáctanos</a>
+</div>
+<div class="flex flex-wrap justify-center gap-4 text-text-muted-light dark:text-text-muted-dark">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-2xl">photo_camera</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-2xl">social_leaderboard</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-2xl">flutter</span></a>
+</div>
+<p class="text-base font-normal leading-normal text-text-muted-light dark:text-text-muted-dark">© 2024 Sugarless. Todos los derechos reservados.</p>
+</footer>
+</main>
+</div>
+</div>
+</div>
+</body></html>

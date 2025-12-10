@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quiénes Somos "Sugarless"</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#a7eb47",
+            "background-light": "#f7f8f6",
+            "background-dark": "#1a2111",
+            "text-light": "#151811",
+            "text-dark": "#e8e9e7",
+            "text-muted-light": "#788863",
+            "text-muted-dark": "#9ca98a",
+            "border-light": "#f3f4f0",
+            "border-dark": "#2a341e",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-light dark:border-border-dark px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4">
+<a href="index.html" class="flex items-center gap-4">
+<img alt="Sugarless logo" class="h-6 w-auto" src="images/sugarless.png"/>
+<h2 class="text-lg font-bold tracking-[-0.015em]">Sugarless</h2>
+</a>
+</div>
+<nav class="hidden md:flex flex-1 justify-center gap-9">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="productos.html">Productos</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="tiendas.html">Tiendas</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+<a class="text-sm font-bold text-primary" href="about.html">Sobre Nosotros</a>
+</nav>
+<div class="flex items-center">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-text-light text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Comprar</span>
+</button>
+</div>
+</header>
+<main class="flex flex-col items-center text-center px-4 py-16 sm:py-24 gap-16 sm:gap-24">
+<div class="flex min-w-72 flex-col gap-3 items-center">
+<p class="text-4xl sm:text-5xl font-black leading-tight tracking-[-0.033em] max-w-2xl">Conoce al equipo de Sugarless</p>
+<p class="text-base font-normal leading-normal text-text-muted-light dark:text-text-muted-dark max-w-xl">Sugarless nació de un proyecto entre padre e hijo para promover snacks saludables y divertidos.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-4xl">
+<div class="flex flex-col items-center gap-4">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
+<span class="material-symbols-outlined text-primary text-4xl">rocket_launch</span>
+</div>
+<h3 class="text-xl font-bold">Nuestra Misión</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark">Ofrecer las alternativas más deliciosas y saludables a los dulces tradicionales, ¡demostrando que comer sano también es divertido!</p>
+</div>
+<div class="flex flex-col items-center gap-4">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
+<span class="material-symbols-outlined text-primary text-4xl">visibility</span>
+</div>
+<h3 class="text-xl font-bold">Nuestra Visión</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark">Queremos ser la marca favorita de snacks saludables para niños y jóvenes en todo el país, inspirando hábitos de alimentación positivos.</p>
+</div>
+<div class="flex flex-col items-center gap-4">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
+<span class="material-symbols-outlined text-primary text-4xl">favorite</span>
+</div>
+<h3 class="text-xl font-bold">Nuestros Valores</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark">Nos guiamos por la Calidad en nuestros ingredientes, la Diversión en nuestros sabores y la Transparencia en todo lo que hacemos.</p>
+</div>
+</div>
+<div class="flex flex-col gap-10 px-4 py-10 @container w-full items-center">
+<div class="bg-white dark:bg-background-dark/50 border border-border-light dark:border-border-dark p-8 rounded-xl flex w-full max-w-3xl flex-col items-center gap-6">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32" data-alt="Avatar illustration of the Sugarless team" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPASIZJR8Z9Nj4c0sVZbrZO14DfMP3n3v4Sd35Bk4cUTkGlhk2QwVHzrN3qxMi5JjYk0vxZ49n83rcAkd_1iN6ZbG6eAp53e3HwAoWaAUPRKaAFIAt3SohDS6KoJJ2q-kNN75J_9wj-J5CYtPvhuct5F-vnVNxRPAHr2pXmEsPRSxdomi6yuCgb5jJTPLAkJAPGGM_I00TGz_gRlbEDaak5fsYqx78I9TxH0APq2D4mNC5wdJRl2M06YVX3Lm8FecG4MBtnVwSLV1o");'></div>
+<div class="flex flex-col items-center justify-center gap-2">
+<p class="text-2xl font-bold leading-tight tracking-[-0.015em] text-center">Nuestro Equipo</p>
+<p class="text-base font-normal leading-normal text-center text-text-muted-light dark:text-text-muted-dark max-w-lg">
+                        Conoce al Joven Fundador y su mentor, los corazones detrás de cada producto saludable y delicioso que creamos. Su pasión por la comida sana es la chispa que inició Sugarless.
+                      </p>
+</div>
+</div>
+</div>
+</main>
+<footer class="flex flex-col gap-6 px-5 py-10 text-center border-t border-solid border-border-light dark:border-border-dark">
+<div class="flex flex-wrap items-center justify-center gap-6">
+<a class="text-text-muted-light dark:text-text-muted-dark text-base font-normal leading-normal min-w-40" href="#">Términos de Servicio</a>
+<a class="text-text-muted-light dark:text-text-muted-dark text-base font-normal leading-normal min-w-40" href="#">Política de Privacidad</a>
+<a class="text-text-muted-light dark:text-text-muted-dark text-base font-normal leading-normal min-w-40" href="#">Contacto</a>
+</div>
+<div class="flex flex-wrap justify-center gap-4">
+<a href="#">
+<svg class="text-text-muted-light dark:text-text-muted-dark size-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07m0-2.163c-3.273 0-3.692.012-4.988.072-4.257.194-6.483 2.42-6.677 6.677-.06 1.295-.072 1.714-.072 4.988s.012 3.692.072 4.988c.194 4.257 2.42 6.483 6.677 6.677 1.296.06 1.714.072 4.988.072s3.692-.012 4.988-.072c4.257-.194 6.483-2.42 6.677-6.677.06-1.295.072-1.714.072-4.988s-.012-3.692-.072-4.988c-.194-4.257-2.42-6.483-6.677-6.677-1.296-.06-1.714-.072-4.988-.072z"></path><path d="M12 6.845c-2.849 0-5.155 2.306-5.155 5.155s2.306 5.155 5.155 5.155 5.155-2.306 5.155-5.155-2.306-5.155-5.155-5.155zm0 8.31c-1.745 0-3.155-1.41-3.155-3.155s1.41-3.155 3.155-3.155 3.155 1.41 3.155 3.155-1.41 3.155-3.155 3.155z"></path><path d="M16.949 7.055c-.578 0-1.045.467-1.045 1.045s.467 1.045 1.045 1.045 1.045-.467 1.045-1.045-.467-1.045-1.045-1.045z"></path></svg>
+</a>
+<a href="#">
+<svg class="text-text-muted-light dark:text-text-muted-dark size-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+</a>
+<a href="#">
+<svg class="text-text-muted-light dark:text-text-muted-dark size-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.298 1.634 4.218 3.82 4.654-.7.192-1.447.248-2.224.248-.307 0-.604-.03-.893-.086.618 1.948 2.441 3.32 4.6 3.359-1.64 1.28-3.712 2.024-5.96 2.024-.386 0-.766-.023-1.141-.066 2.109 1.354 4.608 2.148 7.29 2.148 8.65 0 13.38-7.234 13.08-13.684.91-.659 1.7-1.48 2.323-2.41z"></path></svg>
+</a>
+</div>
+<p class="text-text-muted-light dark:text-text-muted-dark text-base font-normal leading-normal">© 2024 Sugarless. Todos los derechos reservados.</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tiendas "Sugarless"</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#bdee2b",
+            "background-light": "#f7f8f6",
+            "background-dark": "#1d2210",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#161811] dark:text-background-light">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f3f4f0] dark:border-b-white/10 px-10 py-3">
+<div class="flex items-center gap-4 text-[#161811] dark:text-white">
+<a href="index.html" class="flex items-center gap-4">
+<img alt="Sugarless logo" class="h-6 w-auto" src="images/sugarless.png"/>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Sugarless</h2>
+</a>
+</div>
+<div class="flex flex-1 justify-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-sm font-medium leading-normal text-[#7f8961] dark:text-white/70 hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="text-sm font-medium leading-normal text-[#7f8961] dark:text-white/70 hover:text-primary transition-colors" href="productos.html">Productos</a>
+<a class="text-sm font-bold leading-normal text-[#161811] dark:text-white" href="tiendas.html">Tiendas</a>
+<a class="text-sm font-medium leading-normal text-[#7f8961] dark:text-white/70 hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+<a class="text-sm font-medium leading-normal text-[#7f8961] dark:text-white/70 hover:text-primary transition-colors" href="about.html">Sobre Nosotros</a>
+</div>
+</div>
+<button class="flex min-w-[100px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#161811] text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Contacto</span>
+</button>
+</header>
+<main class="py-10 px-4">
+<div class="flex flex-wrap justify-center gap-3 p-4 text-center">
+<div class="flex w-full flex-col items-center gap-3">
+<p class="text-[#161811] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Nuestras Tiendas Sugarless</p>
+<p class="text-[#7f8961] dark:text-white/70 text-base font-normal leading-normal">Encuentra los productos más saludables cerca de ti.</p>
+</div>
+</div>
+<div class="flex px-4 py-8">
+<div class="w-full bg-center bg-no-repeat aspect-[2/1] bg-cover rounded-xl object-cover" data-alt="Mapa abstracto con marcadores de ubicación sobre una cuadrícula de calles en tonos pastel" data-location="Ciudad Capital" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYVzOz8cjxbI14GpCsFRAqtUG6unK2gMEvy2LBwo1z1S_UZVoIsPyy3hpgKwfHcRO1O_jz_xi69jUY0qvNQXSBrXDWxtw7dbEJoDjveyY_VHrM6JJN62wI9BwgyKp6R5Zc9XF7gKGetJ7Bb47vrO4OXGYoOB2fl2scK_VWpPAi9eqWLasoC5yxwZtFFR1sIadDirwhPkyCwxfxvV5VytalHvuOo9gQJrGwMJFzat52ZLZJAk2TNArQV3EpnnZRrTTf65mQ-wNi_lEg');"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 px-4">
+<div class="p-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-[0_0_12px_rgba(0,0,0,0.05)] bg-white dark:bg-background-dark/50 border border-transparent dark:border-white/10">
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4">
+<p class="text-[#161811] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Sugarless Centro</p>
+<div class="flex items-end gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-[#7f8961] dark:text-white/70 text-base font-normal leading-normal">Calle Ficticia 123, Ciudad Capital</p>
+<p class="text-[#7f8961] dark:text-white/70 text-base font-normal leading-normal">Horario: Lunes a Sábado, 9:00 - 20:00</p>
+</div>
+</div>
+<button class="mt-2 flex w-full max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#161811] text-sm font-medium leading-normal">
+<span class="truncate">Ver en mapa</span>
+</button>
+</div>
+</div>
+</div>
+<div class="p-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-[0_0_12px_rgba(0,0,0,0.05)] bg-white dark:bg-background-dark/50 border border-transparent dark:border-white/10">
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4">
+<p class="text-[#161811] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Sugarless Norte</p>
+<div class="flex items-end gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-[#7f8961] dark:text-white/70 text-base font-normal leading-normal">Avenida Principal 456, Ciudad Capital</p>
+<p class="text-[#7f8961] dark:text-white/70 text-base font-normal leading-normal">Horario: Lunes a Viernes, 10:00 - 19:00</p>
+</div>
+</div>
+<button class="mt-2 flex w-full max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#161811] text-sm font-medium leading-normal">
+<span class="truncate">Ver en mapa</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-16 text-center text-[#7f8961] dark:text-white/50 border-t border-solid border-t-[#f3f4f0] dark:border-t-white/10 pt-8 px-10">
+<div class="flex justify-center gap-6 mb-4">
+<a class="hover:text-primary" href="#">Facebook</a>
+<a class="hover:text-primary" href="#">Instagram</a>
+<a class="hover:text-primary" href="#">Twitter</a>
+</div>
+<p class="text-sm">© 2024 Sugarless. Todos los derechos reservados.</p>
+<p class="text-xs mt-2"><a class="hover:underline" href="#">Términos y Condiciones</a> | <a class="hover:underline" href="#">Política de Privacidad</a></p>
+</footer>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>
