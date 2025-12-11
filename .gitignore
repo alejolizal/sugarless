@@ -67,4 +67,5 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
-#archivos terminados en Identifier
+#archivos terminados en identifier
+*.identifier
