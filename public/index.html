@@ -6,16 +6,8 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings:
-                'FILL' 0,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 24;
-        }
-    </style>
+<link href="assets/css/material-icons.css" rel="stylesheet"/>
+<link href="assets/css/assistant.css" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -28,7 +20,9 @@
               "text-light": "#151811",
               "text-dark": "#f3f4f0",
               "muted-light": "#798961",
-              "muted-dark": "#a8b594"
+              "muted-dark": "#a8b594",
+              "border-light": "#f3f4f0",
+              "border-dark": "#2a361a"
             },
             fontFamily: {
               "display": ["Plus Jakarta Sans", "sans-serif"]
@@ -41,7 +35,7 @@
 </head>
 <body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
 <div class="relative flex min-h-screen w-full flex-col items-center">
-<header class="w-full max-w-5xl px-4 sm:px-10 py-5">
+<header class="w-full max-w-5xl px-4 sm:px-10 py-5 relative">
 <nav class="flex items-center justify-between">
 <div class="flex items-center gap-3">
 <a href="index.html" class="flex items-center gap-3">
@@ -57,14 +51,30 @@
 <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">Sobre Nosotros</a>
 </div>
 <div class="flex items-center gap-2">
-<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-background-light dark:bg-background-dark/50 hover:bg-primary/20 transition-colors">
+<button id="mobile-menu-button" class="md:hidden flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-background-light dark:bg-background-dark/50 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark">menu</span>
+</button>
+<button id="dark-mode-toggle" class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-background-light dark:bg-background-dark/50 hover:bg-primary/20 transition-colors" aria-label="Toggle dark mode">
+<span id="dark-mode-icon" class="material-symbols-outlined text-text-light dark:text-text-dark">dark_mode</span>
+</button>
+<button class="hidden md:flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-background-light dark:bg-background-dark/50 hover:bg-primary/20 transition-colors">
 <span class="material-symbols-outlined text-text-light dark:text-text-dark">person</span>
 </button>
-<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-background-light dark:bg-background-dark/50 hover:bg-primary/20 transition-colors">
+<button class="hidden md:flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-background-light dark:bg-background-dark/50 hover:bg-primary/20 transition-colors">
 <span class="material-symbols-outlined text-text-light dark:text-text-dark">shopping_cart</span>
 </button>
 </div>
 </nav>
+<!-- Menú móvil desplegable -->
+<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 mt-2 mx-4 bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg shadow-lg z-50">
+<div class="flex flex-col py-4">
+<a class="text-sm font-bold hover:text-primary transition-colors px-6 py-3 border-b border-border-light dark:border-border-dark" href="index.html">Inicio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors px-6 py-3 border-b border-border-light dark:border-border-dark" href="productos.html">Productos</a>
+<a class="text-sm font-medium hover:text-primary transition-colors px-6 py-3 border-b border-border-light dark:border-border-dark" href="tiendas.html">Tiendas</a>
+<a class="text-sm font-medium hover:text-primary transition-colors px-6 py-3 border-b border-border-light dark:border-border-dark" href="servicios.html">Servicios</a>
+<a class="text-sm font-medium hover:text-primary transition-colors px-6 py-3" href="about.html">Sobre Nosotros</a>
+</div>
+</div>
 </header>
 <main class="flex flex-1 flex-col items-center justify-center px-4 py-16 sm:py-20 text-center">
 <section class="flex flex-col items-center gap-8 w-full max-w-4xl">
@@ -96,4 +106,141 @@
 </div>
 </footer>
 </div>
+<!-- Asistente flotante Leafo -->
+<div class="fixed bottom-6 right-6 z-[100]">
+    <!-- Botón flotante -->
+    <button id="leafo-assistant-button" class="w-16 h-16 rounded-full bg-primary shadow-lg hover:shadow-xl transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark">
+        <img src="images/leafo.jpeg" alt="Asistente Leafoo'" class="w-full h-full rounded-full object-cover"/>
+    </button>
+    
+    <!-- Panel del asistente -->
+    <div id="leafo-assistant-panel" class="assistant-panel hidden absolute bottom-20 right-0 w-80 bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-xl shadow-2xl p-4 mb-2">
+        <div class="flex items-center gap-3 mb-4 pb-3 border-b border-border-light dark:border-border-dark">
+            <img src="images/leafo.jpeg" alt="Leafo" class="w-10 h-10 rounded-full object-cover"/>
+            <div>
+                <h3 class="font-bold text-sm text-text-light dark:text-text-dark">Leafoo'</h3>
+                <p class="text-xs text-muted-light dark:text-muted-dark">Tu asistente</p>
+            </div>
+            <button id="leafo-close-button" class="ml-auto text-muted-light dark:text-muted-dark hover:text-text-light dark:hover:text-text-dark transition-colors">
+                <span class="material-symbols-outlined text-xl">close</span>
+            </button>
+        </div>
+        <div class="space-y-2">
+            <p class="text-sm text-text-light dark:text-text-dark mb-4">¡Hola! Soy Leafoo', tu asistente virtual. ¿En qué puedo ayudarte hoy?</p>
+            <div class="flex flex-col gap-2">
+                <a href="productos.html" class="text-left px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-text-light dark:text-text-dark transition-colors text-sm">
+                    Ver productos
+                </a>
+                <button class="text-left px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-text-light dark:text-text-dark transition-colors text-sm">
+                    Información de contacto
+                </button>
+                <button class="text-left px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-text-light dark:text-text-dark transition-colors text-sm">
+                    Preguntas frecuentes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+// Control del dark mode
+(function() {
+    const html = document.documentElement;
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const darkModeIcon = document.getElementById('dark-mode-icon');
+    
+    // Cargar preferencia guardada o usar la preferencia del sistema
+    function initDarkMode() {
+        const saved = localStorage.getItem('darkMode');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (saved === 'dark' || (saved === null && prefersDark)) {
+            html.classList.remove('light');
+            html.classList.add('dark');
+            if (darkModeIcon) darkModeIcon.textContent = 'light_mode';
+        } else {
+            html.classList.remove('dark');
+            html.classList.add('light');
+            if (darkModeIcon) darkModeIcon.textContent = 'dark_mode';
+        }
+    }
+    
+    // Toggle dark mode
+    function toggleDarkMode() {
+        const isDark = html.classList.contains('dark');
+        
+        if (isDark) {
+            html.classList.remove('dark');
+            html.classList.add('light');
+            localStorage.setItem('darkMode', 'light');
+            if (darkModeIcon) darkModeIcon.textContent = 'dark_mode';
+        } else {
+            html.classList.remove('light');
+            html.classList.add('dark');
+            localStorage.setItem('darkMode', 'dark');
+            if (darkModeIcon) darkModeIcon.textContent = 'light_mode';
+        }
+    }
+    
+    // Inicializar al cargar
+    initDarkMode();
+    
+    // Agregar event listener al botón
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+    }
+    
+    // Escuchar cambios en la preferencia del sistema
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('darkMode')) {
+            initDarkMode();
+        }
+    });
+})();
+
+// Control del menú móvil
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Cerrar el menú al hacer clic en un enlace
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+});
+
+// Control del asistente flotante Leafo
+document.addEventListener('DOMContentLoaded', function() {
+    const assistantButton = document.getElementById('leafo-assistant-button');
+    const assistantPanel = document.getElementById('leafo-assistant-panel');
+    const closeButton = document.getElementById('leafo-close-button');
+    
+    if (assistantButton && assistantPanel) {
+        assistantButton.addEventListener('click', function() {
+            assistantPanel.classList.toggle('hidden');
+        });
+        
+        if (closeButton) {
+            closeButton.addEventListener('click', function() {
+                assistantPanel.classList.add('hidden');
+            });
+        }
+        
+        // Cerrar al hacer clic fuera del panel
+        document.addEventListener('click', function(event) {
+            if (!assistantButton.contains(event.target) && !assistantPanel.contains(event.target)) {
+                assistantPanel.classList.add('hidden');
+            }
+        });
+    }
+});
+</script>
 </body></html>

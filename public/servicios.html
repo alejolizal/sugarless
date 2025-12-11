@@ -7,7 +7,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/material-icons.css" rel="stylesheet"/>
 <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
@@ -33,7 +33,7 @@
 <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
 <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
 <!-- TopNavBar -->
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e1e5dc] dark:border-b-[#3a452a] px-10 py-3">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e1e5dc] dark:border-b-[#3a452a] px-4 md:px-10 py-3 relative">
 <div class="flex items-center gap-4 text-[#151811] dark:text-background-light">
 <a href="index.html" class="flex items-center gap-4">
 <img alt="Sugarless logo" class="h-6 w-auto" src="images/sugarless.png"/>
@@ -51,6 +51,24 @@
 <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#151811] text-sm font-bold leading-normal tracking-[0.015em]">
 <span class="truncate">Contáctanos</span>
 </button>
+</div>
+<div class="flex items-center gap-2">
+<button id="mobile-menu-button" class="md:hidden flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-background-light dark:bg-background-dark/50 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-[#151811] dark:text-background-light">menu</span>
+</button>
+<button id="dark-mode-toggle" class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-background-light dark:bg-background-dark/50 hover:bg-primary/20 transition-colors" aria-label="Toggle dark mode">
+<span id="dark-mode-icon" class="material-symbols-outlined text-[#151811] dark:text-background-light">dark_mode</span>
+</button>
+</div>
+<!-- Menú móvil desplegable -->
+<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 mt-2 mx-4 bg-background-light dark:bg-background-dark border border-b-[#e1e5dc] dark:border-b-[#3a452a] rounded-lg shadow-lg z-50">
+<div class="flex flex-col py-4">
+<a class="text-sm font-medium hover:text-primary transition-colors px-6 py-3 border-b border-b-[#e1e5dc] dark:border-b-[#3a452a]" href="index.html">Inicio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors px-6 py-3 border-b border-b-[#e1e5dc] dark:border-b-[#3a452a]" href="productos.html">Productos</a>
+<a class="text-sm font-bold text-primary transition-colors px-6 py-3 border-b border-b-[#e1e5dc] dark:border-b-[#3a452a]" href="servicios.html">Servicios</a>
+<a class="text-sm font-medium hover:text-primary transition-colors px-6 py-3 border-b border-b-[#e1e5dc] dark:border-b-[#3a452a]" href="tiendas.html">Tiendas</a>
+<a class="text-sm font-medium hover:text-primary transition-colors px-6 py-3" href="about.html">Sobre Nosotros</a>
+</div>
 </div>
 </header>
 <main class="flex flex-col gap-10 items-center text-center py-10 md:py-16">
@@ -137,4 +155,80 @@
 </div>
 </div>
 </div>
+<script>
+// Control del dark mode
+(function() {
+    const html = document.documentElement;
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const darkModeIcon = document.getElementById('dark-mode-icon');
+    
+    // Cargar preferencia guardada o usar la preferencia del sistema
+    function initDarkMode() {
+        const saved = localStorage.getItem('darkMode');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (saved === 'dark' || (saved === null && prefersDark)) {
+            html.classList.remove('light');
+            html.classList.add('dark');
+            if (darkModeIcon) darkModeIcon.textContent = 'light_mode';
+        } else {
+            html.classList.remove('dark');
+            html.classList.add('light');
+            if (darkModeIcon) darkModeIcon.textContent = 'dark_mode';
+        }
+    }
+    
+    // Toggle dark mode
+    function toggleDarkMode() {
+        const isDark = html.classList.contains('dark');
+        
+        if (isDark) {
+            html.classList.remove('dark');
+            html.classList.add('light');
+            localStorage.setItem('darkMode', 'light');
+            if (darkModeIcon) darkModeIcon.textContent = 'dark_mode';
+        } else {
+            html.classList.remove('light');
+            html.classList.add('dark');
+            localStorage.setItem('darkMode', 'dark');
+            if (darkModeIcon) darkModeIcon.textContent = 'light_mode';
+        }
+    }
+    
+    // Inicializar al cargar
+    initDarkMode();
+    
+    // Agregar event listener al botón
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+    }
+    
+    // Escuchar cambios en la preferencia del sistema
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('darkMode')) {
+            initDarkMode();
+        }
+    });
+})();
+
+// Control del menú móvil
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Cerrar el menú al hacer clic en un enlace
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+});
+</script>
 </body></html>

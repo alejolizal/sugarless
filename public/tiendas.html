@@ -9,7 +9,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/material-icons.css" rel="stylesheet"/>
 <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
@@ -34,14 +34,14 @@
 <div class="layout-container flex h-full grow flex-col">
 <div class="flex flex-1 justify-center py-5">
 <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f3f4f0] dark:border-b-white/10 px-10 py-3">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f3f4f0] dark:border-b-white/10 px-4 md:px-10 py-3 relative">
 <div class="flex items-center gap-4 text-[#161811] dark:text-white">
 <a href="index.html" class="flex items-center gap-4">
 <img alt="Sugarless logo" class="h-6 w-auto" src="images/sugarless.png"/>
 <h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Sugarless</h2>
 </a>
 </div>
-<div class="flex flex-1 justify-center gap-8">
+<div class="hidden md:flex flex-1 justify-center gap-8">
 <div class="flex items-center gap-9">
 <a class="text-sm font-medium leading-normal text-[#7f8961] dark:text-white/70 hover:text-primary transition-colors" href="index.html">Inicio</a>
 <a class="text-sm font-medium leading-normal text-[#7f8961] dark:text-white/70 hover:text-primary transition-colors" href="productos.html">Productos</a>
@@ -50,9 +50,27 @@
 <a class="text-sm font-medium leading-normal text-[#7f8961] dark:text-white/70 hover:text-primary transition-colors" href="about.html">Sobre Nosotros</a>
 </div>
 </div>
-<button class="flex min-w-[100px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#161811] text-sm font-bold leading-normal tracking-[0.015em]">
+<div class="flex items-center gap-2">
+<button id="mobile-menu-button" class="md:hidden flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-background-light dark:bg-background-dark/50 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-[#161811] dark:text-white">menu</span>
+</button>
+<button id="dark-mode-toggle" class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-background-light dark:bg-background-dark/50 hover:bg-primary/20 transition-colors" aria-label="Toggle dark mode">
+<span id="dark-mode-icon" class="material-symbols-outlined text-[#161811] dark:text-white">dark_mode</span>
+</button>
+<button class="hidden md:flex min-w-[100px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#161811] text-sm font-bold leading-normal tracking-[0.015em]">
 <span class="truncate">Contacto</span>
 </button>
+</div>
+<!-- Menú móvil desplegable -->
+<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 mt-2 mx-4 bg-background-light dark:bg-background-dark border border-b-[#f3f4f0] dark:border-white/10 rounded-lg shadow-lg z-50">
+<div class="flex flex-col py-4">
+<a class="text-sm font-medium hover:text-primary transition-colors px-6 py-3 border-b border-b-[#f3f4f0] dark:border-white/10" href="index.html">Inicio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors px-6 py-3 border-b border-b-[#f3f4f0] dark:border-white/10" href="productos.html">Productos</a>
+<a class="text-sm font-bold text-primary transition-colors px-6 py-3 border-b border-b-[#f3f4f0] dark:border-white/10" href="tiendas.html">Tiendas</a>
+<a class="text-sm font-medium hover:text-primary transition-colors px-6 py-3 border-b border-b-[#f3f4f0] dark:border-white/10" href="servicios.html">Servicios</a>
+<a class="text-sm font-medium hover:text-primary transition-colors px-6 py-3" href="about.html">Sobre Nosotros</a>
+</div>
+</div>
 </header>
 <main class="py-10 px-4">
 <div class="flex flex-wrap justify-center gap-3 p-4 text-center">
@@ -112,4 +130,80 @@
 </div>
 </div>
 </div>
+<script>
+// Control del dark mode
+(function() {
+    const html = document.documentElement;
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const darkModeIcon = document.getElementById('dark-mode-icon');
+    
+    // Cargar preferencia guardada o usar la preferencia del sistema
+    function initDarkMode() {
+        const saved = localStorage.getItem('darkMode');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (saved === 'dark' || (saved === null && prefersDark)) {
+            html.classList.remove('light');
+            html.classList.add('dark');
+            if (darkModeIcon) darkModeIcon.textContent = 'light_mode';
+        } else {
+            html.classList.remove('dark');
+            html.classList.add('light');
+            if (darkModeIcon) darkModeIcon.textContent = 'dark_mode';
+        }
+    }
+    
+    // Toggle dark mode
+    function toggleDarkMode() {
+        const isDark = html.classList.contains('dark');
+        
+        if (isDark) {
+            html.classList.remove('dark');
+            html.classList.add('light');
+            localStorage.setItem('darkMode', 'light');
+            if (darkModeIcon) darkModeIcon.textContent = 'dark_mode';
+        } else {
+            html.classList.remove('light');
+            html.classList.add('dark');
+            localStorage.setItem('darkMode', 'dark');
+            if (darkModeIcon) darkModeIcon.textContent = 'light_mode';
+        }
+    }
+    
+    // Inicializar al cargar
+    initDarkMode();
+    
+    // Agregar event listener al botón
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+    }
+    
+    // Escuchar cambios en la preferencia del sistema
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('darkMode')) {
+            initDarkMode();
+        }
+    });
+})();
+
+// Control del menú móvil
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Cerrar el menú al hacer clic en un enlace
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+});
+</script>
 </body></html>

@@ -1,0 +1,10 @@
+/* Asistente Flotante Leafo - Estilos */
+.assistant-panel {
+    transition: all 0.3s ease-in-out;
+}
+
+.assistant-panel.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
